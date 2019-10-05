@@ -2,19 +2,23 @@ import React, {useReducer} from "react";
 
 interface Props {
   theme: string;
+  dark: boolean;
   dispatch: any;
 }
 
-export const CustomContext = React.createContext<Props>({theme: "default", dispatch: () => {}});
+export const CustomContext = React.createContext<Props>({theme: "default", dark: false, dispatch: () => {}});
 
 const initialState = {
-  theme: undefined,
+  theme: "default",
+  dark: false
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
     case 'reset':
       return initialState;
+    case 'toggle':
+      return {...state, dark: !state.dark}
     case 'setUser':
       return { ...state, username: action.payload };
     default:
@@ -23,10 +27,10 @@ const reducer = (state, action) => {
 };
 
 export const CustomContextProvider = ({...rest}) => {
-  const [{theme}, dispatch] = useReducer(reducer, initialState);
+  const [{theme, dark}, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <CustomContext.Provider value={{theme, dispatch}}>
+    <CustomContext.Provider value={{theme, dark, dispatch}}>
       {rest.children}
     </CustomContext.Provider>
   );

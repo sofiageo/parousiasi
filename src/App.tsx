@@ -1,32 +1,23 @@
 import React, {useContext, useMemo} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {Box, Grid, Grommet, ResponsiveContext} from "grommet";
+import {Box, Grid, Grommet, ResponsiveContext, ThemeContext} from "grommet";
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {Example1} from "./components/example1";
 import {Example2} from "./components/example2";
 import {Example3} from "./components/example3";
-import {Main} from "./components/Main";
+import {Welcome} from "./components/Welcome";
 import { Header } from './components/Header';
 import {CustomContext} from "./contexts/CustomContext";
-import defaultTheme from "./themes/DefaultTheme";
+import { defaultTheme } from './themes/DefaultTheme';
 
 const App: React.FC = () => {
 
   const size = useContext(ResponsiveContext);
-  const {theme} = useContext(CustomContext);
-
-  const themeObject = useMemo(() => {
-    switch(theme) {
-      case 'default':
-        return defaultTheme;
-      case 'other':
-        return {};
-    }
-  }, [theme]);
+  const {dark} = useContext(CustomContext);
+  const theme = useMemo(() => defaultTheme(dark), [dark]);
 
   return (
-    <Grommet theme={themeObject} full>
+    <Grommet theme={theme} full>
       <BrowserRouter>
         <Grid
           areas={[
@@ -43,7 +34,7 @@ const App: React.FC = () => {
           </Box>
           <Box gridArea="main">
             <Switch>
-              <Route exact path="/" component={Main}/>
+              <Route exact path="/" component={Welcome}/>
               <Route path="/example/1" component={Example1}/>
               <Route path="/example/2" component={Example2}/>
               <Route path="/example/3" component={Example3}/>
