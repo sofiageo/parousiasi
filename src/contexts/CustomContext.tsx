@@ -19,8 +19,6 @@ const reducer = (state, action) => {
       return initialState;
     case 'toggle':
       return {...state, dark: !state.dark}
-    case 'setUser':
-      return { ...state, username: action.payload };
     default:
       return state;
   }

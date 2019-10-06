@@ -71,6 +71,32 @@ export const defaultTheme = (dark: boolean) => {
             "maxWidth": "2736px"
           }
         },
+        6: {
+          font: {
+            // family: undefined,
+            // weight: undefined,
+          },
+          "small": {
+            "size": "14px",
+            "height": "40px",
+            "maxWidth": "816px"
+          },
+          "medium": {
+            "size": "10px",
+            "height": "10px",
+            "maxWidth": "1200px"
+          },
+          "large": {
+            "size": "8px",
+            "height": "8px",
+            "maxWidth": "1968px"
+          },
+          "xlarge": {
+            "size": "44px",
+            "height": "120px",
+            "maxWidth": "2736px"
+          }
+        },
       },
     },
     paragraph: {
@@ -98,6 +124,14 @@ export const defaultTheme = (dark: boolean) => {
         "size": "34px",
         "height": "40px",
         "maxWidth": "816px"
+      }
+    },
+    accordion: {
+      heading: { level: 2 },
+      icons: {
+        color: 'green',
+        // collapse: <IceCream/>,
+        // expand: <IceCream/>
       }
     }
   };
