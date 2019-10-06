@@ -42,7 +42,29 @@ The following features are backported from ECMAScript 2015:
 * Can be used with popular frameworks like Angular, React, VUE etc.
 * Most popular IDEs now have Typescript support IntelliJ, VS Code, Vim (haha), NetBeans etc
 * TypeScript provides highly productive development tools for JavaScript IDEs and practices, like static checking.
+* Battle tested Angular is written in TS also Visual studio code
 
 ## A nice free book
 
 * https://basarat.gitbooks.io/typescript/
+
+## Things we can showcase:
+
+* implicit explicit types
+* Multiple types
+  TypeScript provides us with the any type. This means we can assign multiple types of values to one variable.
+* Sub types
+  Sub types are used when we are unaware of the value of the variable. 
+  TypeScript provides us with two sub types: null and undefined
+* check types with instance of
+  import { Bear } from 'somefile.ts';  
+  let bear = new Bear(3);  
+  if (bear instanceof Bear) {  
+    //perform some operation  
+  }
+
+* Things in TS you might not know
+  https://moin.world/2017/06/18/10-typescript-features-you-might-not-know/
+
+* defaultProps support in JSX  
+  https://blog.bitsrc.io/new-features-in-typescript-you-didnt-know-exist-54b7ab8d0b4f
