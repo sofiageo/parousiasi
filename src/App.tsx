@@ -2,9 +2,9 @@ import React, {useContext, useMemo} from 'react';
 import './App.css';
 import {Box, Grid, grommet, Grommet, ResponsiveContext, ThemeContext} from "grommet";
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import {Example1} from "./components/example1";
-import {Example2} from "./components/example2";
-import {Example3} from "./components/example3";
+import {Typescript} from "./components/Typescript";
+import {GrommetDemo} from "./components/Grommet";
+import {StyledComponents} from "./components/StyledComponents";
 import {Welcome} from "./components/welcome/Welcome";
 import { Header } from './components/Header';
 import {CustomContext} from "./contexts/CustomContext";
@@ -16,36 +16,25 @@ import {grommetTheme} from "./themes/grommet";
 const App: React.FC = () => {
 
   const size = useContext(ResponsiveContext);
-  const {dark} = useContext(CustomContext);
-  const theme = useMemo(() => defaultTheme(dark), [dark]);
-  const grommet = useMemo(() => grommetTheme(dark), [dark]);
+  const {theme, dark} = useContext(CustomContext);
 
   return (
     <Grommet theme={theme} full>
       <BrowserRouter>
-        <Grid
-          areas={[
-            {name: "header", start: [0, 0], end: [0, 0]},
-            {name: "main", start: [0, 1], end: [0, 1]},
-            {name: "foot", start: [0, 2], end: [0, 2]}
-          ]}
-          columns={["flex"]}
-          rows={["auto", "flex", "auto"]}
-          fill="vertical"
-        >
+        <Box>
           <Box tag="header" gridArea="header">
             <Header/>
           </Box>
           <Box gridArea="main">
             <Switch>
               <Route exact path="/" component={Welcome}/>
-              <Route path="/example/1" component={Example1}/>
-              <Route path="/example/2" component={Example2}/>
-              <Route path="/example/3" component={Example3}/>
+              <Route path="/example/1" component={Typescript}/>
+              <Route path="/example/2" component={GrommetDemo}/>
+              <Route path="/example/3" component={StyledComponents}/>
               <Route path="/example/4" component={Example4}/>
             </Switch>
           </Box>
-        </Grid>
+        </Box>
       </BrowserRouter>
     </Grommet>
 
