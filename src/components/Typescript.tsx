@@ -15,8 +15,10 @@ export const Typescript: React.FC = () => {
   }, []);
 
   return (
-    <Box justify="center" align="center" fill="horizontal">
-      {state && <Markdown>{state}</Markdown>}
+    <Box margin="medium" justify="center" align="center">
+      <Box width="xlarge">
+        {state && <Markdown>{state}</Markdown>}
+      </Box>
     </Box>
   );
 };

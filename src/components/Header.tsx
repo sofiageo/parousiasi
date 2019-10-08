@@ -30,16 +30,50 @@ export const Header: React.FC<BoxProps> = () => {
   };
 
   useEffect(() => {
-    dispatch({type: 'theme', payload: deepMerge(generate(24), themes[themeName])});
+    const obj = {
+      paragraph: {
+        small: {
+          "size": "14px",
+          "height": "20px",
+          "maxWidth": "336px"
+        },
+        medium: {
+          "size": "18px",
+          "height": "24px",
+          "maxWidth": "732px"
+        },
+        large: {
+          "size": "22px",
+          "height": "28px",
+          "maxWidth": "732px"
+        },
+        xlarge: {
+          "size": "26px",
+          "height": "32px",
+          "maxWidth": "624px"
+        },
+        xxlarge: {
+          "size": "34px",
+          "height": "40px",
+          "maxWidth": "816px"
+        }
+      },
+      anchor: {
+        color: 'accent-3',
+      },
+    };
+    let t = deepMerge(generate(24), themes[themeName]);
+    t = deepMerge(t, obj);
+    dispatch({type: 'theme', payload: t});
   }, [themeName, dark]);
 
   return (
     <Box direction="row" justify="around" align="center" background="neutral-2">
       <Box direction="row-responsive" width={size} gap="medium" margin="medium">
         <StyledNavLink to="/">Homepage</StyledNavLink>
-        <StyledNavLink to="/example/1">Typescript</StyledNavLink>
+        <StyledNavLink to="/example/1">Styled Components</StyledNavLink>
         <StyledNavLink to="/example/2">Grommet</StyledNavLink>
-        <StyledNavLink to="/example/3">Styled Components</StyledNavLink>
+        <StyledNavLink to="/example/3">Typescript</StyledNavLink>
         <StyledNavLink to="/example/4">Live edit</StyledNavLink>
       </Box>
       <Box align="center">
@@ -51,7 +85,7 @@ export const Header: React.FC<BoxProps> = () => {
         <Select
           plain
           size="small"
-          options={["v1", "aruba", "grommet", "hpe", "hp", "custom"]}
+          options={["v1", "hp", "aruba", "grommet", "hpe", "custom"]}
           value={themeName}
           onChange={event => setThemeName(event.option)}
         />

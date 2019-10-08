@@ -28,9 +28,9 @@ const App: React.FC = () => {
           <Box gridArea="main">
             <Switch>
               <Route exact path="/" component={Welcome}/>
-              <Route path="/example/1" component={Typescript}/>
+              <Route path="/example/1" component={StyledComponents}/>
               <Route path="/example/2" component={GrommetDemo}/>
-              <Route path="/example/3" component={StyledComponents}/>
+              <Route path="/example/3" component={Typescript}/>
               <Route path="/example/4" component={Example4}/>
             </Switch>
           </Box>

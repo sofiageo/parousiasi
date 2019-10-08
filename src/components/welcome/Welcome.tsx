@@ -23,9 +23,9 @@ function reducer(state, action) {
     case 'typed':
       return {...state, typed: action.payload};
     case 'eslint':
-      return {...state, typed: action.payload};
+      return {...state, eslint: action.payload};
     case 'langserver':
-      return {...state, typed: action.payload};
+      return {...state, langserver: action.payload};
     default:
       return state;
   }

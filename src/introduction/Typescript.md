@@ -1,13 +1,19 @@
 ## Introduction
 
+* TypeScript is an open-source programming language developed and maintained by Microsoft. 
+* It is a strict syntactical superset of JavaScript, and adds optional static typing to the language.
+* TypeScript is designed for development of large applications and transcompiles to clean JavaScript.
+* Existing JavaScript programs are also valid TypeScript programs. 
+* TypeScript can be used for development of both client-side and server-side execution. 
 
-## Companies using Typescript
-* Hewlett Packard Enterprise - https://v2.grommet.io/
-* Palantir - https://blueprintjs.com/
 
-## Companies migrating to Typescript
-* Mattermost - https://mattermost.com/
-* Atlassian - https://atlaskit.atlassian.com
-* MUI - https://material-ui.com/
+TypeScript is a language extension that adds features to ECMAScript 6. Additional features include:
 
-## Showcase
+* Type annotations and compile-time type checking
+* Type inference
+* Type erasure
+* Interfaces
+* Enumerated types
+* Generics
+* Namespaces
+* Tuples

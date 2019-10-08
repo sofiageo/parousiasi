@@ -13,9 +13,13 @@ export const StyledComponents: React.FC = () => {
       .then(data => setState(data));
   }, []);
 
+  const components = { "li": { "component": "li", "props": { "size": "medium"}}};
+
   return (
-    <Box fill>
-      {state && <Markdown>{state}</Markdown>}
+    <Box margin="medium" justify="center" align="center">
+      <Box width="xlarge">
+        {state && <Markdown components={components}>{state}</Markdown>}
+      </Box>
     </Box>
   );
 };

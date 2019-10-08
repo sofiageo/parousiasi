@@ -1,4 +1,12 @@
-### Introduction
+## Introduction
+
+### Points for Styled components
+
+* Styled components is a CSS-in-JS styling framework that uses tagged template literals in JavaScript and the awesome power of CSS to provide a platform that allows you to write actual CSS to style react components.
+* CSS-in-JS is a technique where JavaScript is used to style components. When this JavaScript is parsed, CSS is generated as a style element and attached directly on top of the DOM.
+* Visual primitives for the component age.
+* Use the best bits of ES6 and CSS to style your apps
+
 Apart from the improved experience for developers, styled-components provides:
 
 * **Automatic critical CSS**: styled-components keeps track of which components are rendered on a page and injects their styles and nothing else, fully automatically. Combined with code splitting, this means your users load the least amount of code necessary.
