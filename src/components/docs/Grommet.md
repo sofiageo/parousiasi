@@ -9,7 +9,7 @@
 * Styling is no longer global and theming no longer takes place in build-time.
 * Used by many companies like Netflix, GE, IBM, Sony, UBER, GitHub
 
-## Showcase
+### Showcase
 
 * Storybook - https://storybook.grommet.io
 * Theme Builder - https://grommet-theme-builder.netlify.com/

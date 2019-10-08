@@ -26,7 +26,7 @@
 * Sass and polished support
 * 22,000 stars on GitHub
 
-## Companies using Styled-components
+### Companies using Styled-components
 * Atlassian - https://atlaskit.atlassian.com / http://bitbucket.org/
 * Trello - https://trello.com/
 * Vimeo - http://vimeo.com/
@@ -36,5 +36,5 @@
 * Coinbase - https://www.coinbase.com/
 * Patreon - https://www.patreon.com/
 
-## Companies migrating to styled-components
+### Companies migrating to styled-components
 * MUI - https://material-ui.com/

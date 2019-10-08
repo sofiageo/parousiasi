@@ -17,7 +17,7 @@
 * TypeScript provides highly productive development tools for JavaScript IDEs and practices, like static checking.
 * Battle tested Angular is written in TS also Visual studio code
 
-## Companies and libraries using Typescript
+### Companies and libraries using Typescript
 * Microsoft - https://github.com/microsoft/vscode
 * Hewlett Packard Enterprise - https://v2.grommet.io/
 * Palantir - https://blueprintjs.com/
@@ -30,13 +30,19 @@
 * NestJS - https://github.com/nestjs/nest
 
 
-## Companies migrating to Typescript
+### Companies migrating to Typescript
 * Mattermost - https://mattermost.com/
 * Atlassian - https://atlaskit.atlassian.com
 * MUI - https://material-ui.com/
 * VueJS - https://github.com/vuejs/vue-next
 
-## Showcase
+### Migration
+* http://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html
+* React conversion guide: https://github.com/Microsoft/TypeScript-React-Conversion-Guide#typescript-react-conversion-guide
 
+### Links 
+JSX: http://www.typescriptlang.org/docs/handbook/jsx.html
+
+### Showcase
 * Typescript playground - http://www.typescriptlang.org/play/
 * Typescript playground - https://typescript-play.js.org/

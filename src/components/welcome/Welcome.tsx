@@ -8,6 +8,8 @@ import Grommet from '../../introduction/Grommet.md';
 // @ts-ignore
 import Typed from '../../introduction/Typescript.md';
 // @ts-ignore
+import ESlint from '../../introduction/ESLint.md';
+// @ts-ignore
 import Langserver from '../../introduction/Langserver.md';
 
 import {IceCream, Trigger} from "grommet-icons";
@@ -54,9 +56,9 @@ export const Welcome: React.FC = () => {
       .then((res) => res.text())
       .then(data => dispatch({type: 'typed', payload: data}));
 
-    /*fetch(ESlint)
-        .then((res) => res.text())
-        .then(data => dispatch({type: 'eslint', payload: data}));*/
+    fetch(ESlint)
+      .then((res) => res.text())
+      .then(data => dispatch({type: 'eslint', payload: data}));
 
     fetch(Langserver)
       .then((res) => res.text())
